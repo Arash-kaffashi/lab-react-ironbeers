@@ -18,6 +18,7 @@ export default function App() {
           <Route path="/beers" element={<Beers />}></Route>
           <Route path="/random-beer" element={<RandomBeer />}></Route>
           <Route path="/new-beer" element={<NewBeer />}></Route>
+          <Route path="*" element={<h1>Erro 404</h1>}></Route>
         </Route>
         <Route path="*" element={<h1>Erro 404</h1>}></Route>
       </Routes>

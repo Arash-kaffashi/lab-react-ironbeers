@@ -4,7 +4,9 @@ body {
   padding: 0;
 }
 
-h1 {
+h1,
+h2,
+p {
   padding: 0;
   margin: 0;
 }
@@ -32,4 +34,39 @@ article > p {
 .navbar > a {
   text-decoration: none;
   color: white;
+}
+
+.beer {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  padding: 1rem;
+}
+
+.beer > :first-child {
+  flex-basis: 150px;
+}
+
+.beer > :last-child {
+  flex: 1 1 auto;
+}
+
+.beer img {
+  width: 150px;
+}
+
+.beer h1 {
+  font-weight: normal;
+}
+
+.beer h2 {
+  color: rgba(0, 0, 0, 0.4);
+  margin-top: 1rem;
+}
+
+.beer p {
+  margin-top: 0.5rem;
+}
+
+.beer p > span {
+  font-weight: bold;
 }
