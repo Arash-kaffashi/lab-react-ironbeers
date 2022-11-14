@@ -22,3 +22,14 @@ article > p {
 article > p {
   color: gray;
 }
+
+.navbar {
+  background-color: #3dc4fc;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.navbar > a {
+  text-decoration: none;
+  color: white;
+}
