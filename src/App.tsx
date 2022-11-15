@@ -1,9 +1,9 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import "./App.css";
 
 import HomePage from "./pages/HomePage";
-import Header from "./pages/Header";
+import Header from "./components/Header";
 import Beers from "./pages/Beers";
 import Details from "./pages/Details";
 import NewBeer from "./pages/NewBeer";
@@ -13,8 +13,13 @@ export default function App() {
     <main className="App">
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/" element={<Header />}>
-          {/* WITH HEADER */}
+        <Route
+          element={
+            <>
+              <Header />
+              <Outlet />
+            </>
+          }>
           <Route path="/beers" element={<Beers />}></Route>
           <Route path="/beers/:id" element={<Details />}></Route>
           <Route
