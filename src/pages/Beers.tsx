@@ -16,15 +16,16 @@ export default function Beers() {
     })();
   }, []);
 
-  function handleClick(id: string) {
-    navigate("/beer/" + id);
+  function handleClick(beer: beer) {
+    navigate("/beers/" + beer._id, { state: beer, replace: true });
   }
 
   return (
     <div>
-      {beers.map(({ image, name, tagline, contributed_by, _id }) => {
+      {beers.map((beer) => {
+        let { image, name, tagline, contributed_by, _id } = beer;
         return (
-          <div className="beer" key={_id} onClick={() => handleClick(_id)}>
+          <div className="beer" key={_id} onClick={() => handleClick(beer)}>
             <div>
               <img src={image} alt="tagline" />
             </div>

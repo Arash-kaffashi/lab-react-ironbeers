@@ -5,9 +5,7 @@ import beers from "../assets/beers.png";
 import randomBeer from "../assets/random-beer.png";
 import newBeer from "../assets/new-beer.png";
 
-type Props = {};
-
-export default function HomePage({}: Props) {
+export default function HomePage() {
   const navigate = useNavigate();
 
   function handleClick(path: "beers" | "random-beer" | "new-beer") {
