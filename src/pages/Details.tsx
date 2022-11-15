@@ -4,13 +4,15 @@ import axios from "axios";
 
 import { beer } from "../interfaces";
 
-export default function Details() {
+export default function Details({ random }: { random?: boolean }) {
   const navigate = useNavigate();
   const { state }: { state: beer | null; key: Key } = useLocation();
-  const { id } = useParams();
+  let { id } = useParams();
   const [beer, setBeer] = useState(state);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (random) id = "random";
     !state &&
       (async () => {
         let response = await axios

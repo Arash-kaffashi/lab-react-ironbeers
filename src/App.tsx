@@ -6,7 +6,6 @@ import HomePage from "./pages/HomePage";
 import Header from "./pages/Header";
 import Beers from "./pages/Beers";
 import Details from "./pages/Details";
-import RandomBeer from "./pages/RandomBeer";
 import NewBeer from "./pages/NewBeer";
 
 export default function App() {
@@ -21,7 +20,9 @@ export default function App() {
           <Route
             path="/beers/not-found"
             element={<h1>Beer not found</h1>}></Route>
-          <Route path="/random-beer" element={<RandomBeer />}></Route>
+          <Route
+            path="/random-beer"
+            element={<Details random={true} />}></Route>
           <Route path="/new-beer" element={<NewBeer />}></Route>
         </Route>
         <Route path="*" element={<h1>Erro 404</h1>}></Route>
