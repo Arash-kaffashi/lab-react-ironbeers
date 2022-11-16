@@ -196,3 +196,30 @@ article > p {
 .new-beer button:active {
   transform: translateY(2px);
 }
+
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  align-items: center;
+}
+
+.search > input {
+  flex: 1 1 100%;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0 10px;
+  line-height: 2.5rem;
+  color: #21abe6;
+}
+
+.search > input:focus {
+  outline: 1px solid #3dc4fc;
+}
+
+.search > label {
+  color: rgba(0, 0, 0, 0.4);
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
