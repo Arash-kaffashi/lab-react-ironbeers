@@ -13,7 +13,7 @@ export default function HomePage() {
   }
 
   return (
-    <>
+    <div className="page">
       <article onClick={() => handleClick("beers")}>
         <img src={beers} alt="bar" />
         <h1>All Beers</h1>
@@ -43,6 +43,6 @@ export default function HomePage() {
           atque, magnam possimus doloribus!
         </p>
       </article>
-    </>
+    </div>
   );
 }

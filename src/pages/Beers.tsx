@@ -17,7 +17,7 @@ export default function Beers() {
   }, []);
 
   function handleClick(beer: beer) {
-    navigate("/beers/" + beer._id, { state: beer, replace: true });
+    navigate("/beers/" + beer._id, { state: beer, replace: false });
   }
 
   return (

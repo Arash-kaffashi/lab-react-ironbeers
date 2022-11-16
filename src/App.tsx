@@ -17,7 +17,9 @@ export default function App() {
           element={
             <>
               <Header />
-              <Outlet />
+              <div className="page">
+                <Outlet />
+              </div>
             </>
           }>
           <Route path="/beers" element={<Beers />}></Route>
